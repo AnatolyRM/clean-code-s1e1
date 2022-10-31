@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Todo App</title>
+  <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="style.css" media="screen">
 </head>
 
 <body>
   <header class="header">
-    <img class="header-img" src="./eisenhower-matrix.jpg">
+    <img class="header-img" src="./eisenhower-matrix.jpg" alt="header img eisenhower matrix">
     <a class="header-link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
   </header>
+
   <main class="todo-container">
     <p id="todo-add-item">
       <label class="section-name new" for="todo-add-value">Add Item</label>
@@ -29,7 +31,7 @@
         <input class="task-name inp" type="text">
         <button class="btn-edit">Edit</button>
         <button class="btn-delete">
-          <img class="btn-del-img" src="./remove.svg">
+          <img class="btn-del-img" src="./remove.svg" alt="image remove">
         </button>
       </li>
       <li class="edit-mode">
@@ -38,10 +40,10 @@
         <input class="task-name inp" type="text" value="Go Shopping">
         <button class="btn-edit">Save</button>
         <button class="btn-delete">
-          <img class="btn-del-img" src="./remove.svg"></button>
+          <img class="btn-del-img" src="./remove.svg" alt="image remove"></button>
       </li>
     </ul>
-    
+
     <h3 class="section-name">Completed</h3>
     <ul id="completed-tasks" class="section-element">
       <li>
@@ -50,10 +52,11 @@
         <input class="task-name inp" type="text">
         <button class="btn-edit">Edit</button>
         <button class="btn-delete">
-          <img class="btn-del-img" src="./remove.svg"></button>
+          <img class="btn-del-img" src="./remove.svg" alt="image remove"></button>
       </li>
     </ul>
   </main>
+
   <script src="app.js"></script>
 </body>
 
