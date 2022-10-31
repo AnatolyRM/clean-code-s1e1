@@ -5,7 +5,6 @@
 //Solution: Add interactivity so the user can manage daily tasks.
 //Break things down into smaller steps and take each step at a time.
 
-
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput = document.getElementById("todo-add-value");//Add a new task.
@@ -16,21 +15,15 @@ var completedTasksHolder = document.getElementById("completed-tasks");//complete
 
 //New task list item
 var createNewTaskElement = function (taskString) {
-
   var listItem = document.createElement("li");
+  var checkBox = document.createElement("input");
+  var label = document.createElement("label");
 
-  //input (checkbox)
-  var checkBox = document.createElement("input");//checkbx
-  //label
-  var label = document.createElement("label");//label
-  //input (text)
-  var editInput = document.createElement("input");//text
-  //button.edit
-  var editButton = document.createElement("button");//edit button
+  var editInput = document.createElement("input");
+  var editButton = document.createElement("button");
 
-  //button.delete
-  var deleteButton = document.createElement("button");//delete button
-  var deleteButtonImg = document.createElement("img");//delete button image
+  var deleteButton = document.createElement("button");
+  var deleteButtonImg = document.createElement("img");
 
   label.innerText = taskString;
   label.className = 'task-name';
@@ -40,13 +33,12 @@ var createNewTaskElement = function (taskString) {
   editInput.type = "text";
   editInput.className = "task-name";
 
-  editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
+  editButton.innerText = "Edit"; 
   editButton.className = "btn-edit";
 
   deleteButton.className = "btn-delete";
   deleteButtonImg.src = './remove.svg';
   deleteButton.appendChild(deleteButtonImg);
-
 
   //and appending.
   listItem.appendChild(checkBox);
@@ -60,7 +52,6 @@ var createNewTaskElement = function (taskString) {
 
 
 var addTask = function () {
-  console.log("Add Task...");
   //Create a new list item with the text from the #todo-add-value:
   if (!taskInput.value) return;
   var listItem = createNewTaskElement(taskInput.value);
@@ -70,27 +61,17 @@ var addTask = function () {
   bindTaskEvents(listItem, taskCompleted);
 
   taskInput.value = "";
-
 }
 
-//Edit an existing task.
-
 var editTask = function () {
-  console.log("Edit Task...");
-  console.log("Change 'edit' to 'save'");
-
-
   var listItem = this.parentNode;
 
   var editInput = listItem.querySelector('input[type=text]');
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".btn-edit");
   var containsClass = listItem.classList.contains("edit-mode");
-  //If class of the parent is .edit-mode
-  if (containsClass) {
 
-    //switch to .edit-mode
-    //label becomes the inputs value.
+  if (containsClass) {
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
   } else {
