@@ -160,7 +160,7 @@ li>* {
 
 /* Edit Task */
 li>.inp {
-  display: none
+  display: none;
 }
 
 .edit-mode>.inp {
