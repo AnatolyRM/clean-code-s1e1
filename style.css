@@ -158,7 +158,7 @@ button:hover {
 }
 
 /* Completed */
-#completed-tasks>.title {
+#completed-tasks .title {
   text-decoration: line-through;
   color: #888;
 }
